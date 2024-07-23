@@ -1,0 +1,32 @@
+﻿@{
+    ViewBag.Title = "Candidatos Guardados";
+}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" type="text/css" href="~/Content/Site.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="menu-vertical">
+            <ul>
+                <li><a href="@Url.Action("Index", "Home")">Inicio</a></li>
+                <li><a href="@Url.Action("Candidatos", "Home")">Candidatos</a></li>
+                <li><a href="@Url.Action("Votaciones", "Home")">Votaciones</a></li>
+                <li><a href="@Url.Action("Resultado", "Home")">Resultado</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <h1>Candidatos Registrados</h1>
+            <p>Nombre del Votante: @ViewBag.NombreVotante</p>
+            <p>Candidato 1: @ViewBag.Candidato1</p>
+            <p>Candidato 2: @ViewBag.Candidato2</p>
+            <a href="@Url.Action("Votaciones", "Home")" class="btn btn-primary">Ir a Votaciones</a>
+        </div>
+    </div>
+</body>
+</html>

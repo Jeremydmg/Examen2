@@ -1,0 +1,38 @@
+﻿@{
+    ViewBag.Title = "Votaciones";
+}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" type="text/css" href="~/Content/Site.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="menu-vertical">
+            <ul>
+                <li><a href="@Url.Action("Index", "Home")">Inicio</a></li>
+                <li><a href="@Url.Action("Candidatos", "Home")">Candidatos</a></li>
+                <li><a href="@Url.Action("Votaciones", "Home")">Votaciones</a></li>
+                <li><a href="@Url.Action("Resultado", "Home")">Resultado</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <h1>Votaciones</h1>
+            <form action="@Url.Action("RegistrarVoto", "Home")" method="post">
+                <h2>Seleccione un Candidato</h2>
+                <label for="voto1">Juan Pérez</label>
+                <input type="radio" id="voto1" name="candidato" value="Juan Pérez" required />
+                <br />
+                <label for="voto2">María López</label>
+                <input type="radio" id="voto2" name="candidato" value="María López" required />
+                <br />
+                <button type="submit" class="btn btn-primary">Registrar Voto</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
